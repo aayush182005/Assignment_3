@@ -1,0 +1,12 @@
+# Makefile for L1 Cache Simulator
+
+CC = g++
+CFLAGS = -std=c++23 -Wall -O2
+
+all: L1simulate
+
+L1simulate: L1_cache.cpp
+	$(CC) $(CFLAGS) -o L1simulate L1_cache.cpp
+
+clean:
+	rm -f L1simulate *.o
